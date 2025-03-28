@@ -1,0 +1,9 @@
+<servlet>
+    <servlet-name>UsuarioServlet</servlet-name>
+    <servlet-class>com.evidencia.servlet.UsuarioServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UsuarioServlet</servlet-name>
+    <url-pattern>/UsuarioServlet</url-pattern>
+</servlet-mapping>
