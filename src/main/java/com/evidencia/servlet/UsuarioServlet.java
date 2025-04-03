@@ -66,17 +66,6 @@ public class UsuarioServlet extends HttpServlet {
         request.getRequestDispatcher("/views/listaUsuarios.jsp").forward(request, response);
     }
 
-    private void crearUsuario(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String nombre = request.getParameter("nombre");
-        String apellido = request.getParameter("apellido");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-
-        Usuario usuario = new Usuario(0, nombre, apellido, email, password);
-        usuarioService.registrarUsuario(usuario);
-        response.sendRedirect("UsuarioServlet");
-    }
-
     private void actualizarUsuario(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String nombre = request.getParameter("nombre");
